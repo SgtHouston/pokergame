@@ -1,0 +1,22 @@
+.Home {
+    background-color: rgb(28, 28, 41);
+    min-height: 100vh;
+    color: #ffffff;
+    text-align: center;
+}
+
+.home-header {
+    margin: 0px 0px 3px 0px;
+    font-size: 5vw;
+}
+
+.home-options {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.home-option {
+    margin: 0vw 1vw 0vw 1vw;
+    font-size: 4vw;
+}
