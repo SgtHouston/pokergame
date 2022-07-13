@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+import React from 'react'
+// npm install react-router-dom@6
+import Home from "./Pages/Home";
+import Table from './Pages/Table'
+import { BrowserRouter as Router, Route, Routes, NavLink } from "react-router-dom";
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Chris' Poker Game
-        </a>
-      </header>
+      <Router>
+        <Routes>
+
+          {/* Page 1  */}
+          < Route exact path="/" element={<Home/>} />
+
+          {/* Page 2  */}
+          < Route exact path="/table" element={<Table/>} />
+
+          {/* Redirect */}
+          <Route exact path="*"  element={<NavLink to="/" />} />
+          {/* Redirect to homepage */}
+          
+        </Routes>
+      </Router>
+      
     </div>
   );
 }
